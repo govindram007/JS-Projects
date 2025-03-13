@@ -1,20 +1,19 @@
-let user = document.querySelector(".user")
+let inp = document.querySelector("input");
+let btn = document.querySelector("button");
+let msg = document.querySelector("p");
+let restart = document.querySelector(".restart");
 
-const max = prompt("Enter Maximum Number");
-let rand = Math.floor(Math.random() * max) + 1;
-let guess = prompt("Guess the number")
+const max = prompt("Enter the Max Number");
 
-while(true){
-    if(guess == "quit"){
-        user.innerText = "User Quit this game"
-        break;
-    }
-    if(guess == rand){
-        user.innerText = `You are right!! computer generated ${rand}`
-        break;
-    }else if(guess > rand){
-        guess = prompt("your number is to large try again");
-    } else{
-        guess = prompt("your number is too small try again");
-    }
-};
+let random = Math.floor(Math.random() * max) + 1;
+
+btn.addEventListener("click", ()=>{
+   if(random == inp.value){
+     msg.innerText = "Your Right!!"
+    restart.innerText = "Reload to Restart the game"
+   }else if(random < inp.value){
+    msg.innerText = "Too Large!! try again."
+   }else{
+    msg.innerText = "Too Small!! Try again."
+   }
+})
