@@ -2,21 +2,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body{
-    background-color: darkgray;
+    background-color: aliceblue;
     text-align: center;
 }
 
-h1{
-    font-size: 3rem;
-    font-weight: 700;
-    color: red;
+
+
+div{
+    height: 100px;
+    /* background-color: red; */
+    font-size: 1.2rem;
 }
 
-p{
-    font-size: 2rem;
-    font-weight: 100;
-    color: azure;
+input{
+    border: none;
+    border-radius: 0.2rem;
+    background-color: aquamarine;
+    font-size: 1.5rem;
+}
+
+button{
+    padding: 0.5rem;
+    border: 2px solid black;
+    border-radius: 0.5rem;
 }
